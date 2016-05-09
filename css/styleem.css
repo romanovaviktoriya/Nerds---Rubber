@@ -364,7 +364,7 @@ a:active .icon-basket {
 
 .slogan-item p {					/* Абзац слогана */
 	font-size: 1.5em;	/* 15px */
-	line-height: 2.2em;	/* 22px */
+	line-height: 1.47em;	/* 22px */
 	color: #283136;
 }
 
@@ -414,7 +414,7 @@ a:active .icon-basket {
 .content-column-left {		/* Левая колонка контента */
 	float: left;
 	width: 575px;
-	padding-top: 75px;
+	padding-top: 70px;
 	margin: 0;
 	color: #283136;
 }
@@ -1031,14 +1031,14 @@ a:active .icon-basket {
 }
 
 .map-contacts {
-	position: absolute;
+	position: relative; /*absolute;*/
 	box-sizing: border-box;
-	top: 88px;
+	bottom: 328px;	/*top: 88px;*/
 	left: 50%;
 	width: 250px;
 	background-color: #fff;
 	padding: 26px 23px;
-	margin-left: -50%;	/* -440px */
+	margin-left: -50%;	/*-440px;*/
 	z-index: 100;
 	font-size: 1.6em;	/* 16px */
 	line-height: 1.375em;	/* 22px */
@@ -1089,6 +1089,7 @@ a:active .icon-basket {
 
 /* Футер --------------------------------------------------------- */
 .main-footer {
+	margin-top: -248.545px;		/* чтобы спрятать блок контейнера адреса с position: relative; */
 	padding-top: 77px;
 	padding-bottom: 77px;
 	background: #fff;
@@ -1392,7 +1393,7 @@ a:active .icon-basket {
 				right: 10px;
 			}
 			.slider {
-				height: 580px;
+				height: 400px;
 			}
 			.slide {
 				background-size: 200px;
@@ -1437,6 +1438,9 @@ a:active .icon-basket {
 			.content-column-left, .content-column-right {
 				float: none;
 				margin: 0 auto;
+			}
+			.content-column-left {
+				width: 100%;
 			}
 			.content-column-right .picture-logo {
 				margin-top: 0;
