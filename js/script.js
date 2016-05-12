@@ -65,3 +65,14 @@ var marker = new google.maps.Marker({
       icon: image
 	  });
   }
+//---------------------------------------------------------------------------------------------------
+
+	var toggle = document.querySelector(".toggle-nav");			/* Объявление переменных */
+	var list = document.querySelector(".lists");
+    
+
+	toggle.addEventListener("click", function(event) {	/* Клик по ссылке Меню (гамбургеру) */
+	event.preventDefault();								/* Отменяем стандартное поведение */
+	toggle.classList.toggle("hide-show");					/* Припысываем/навешиваем элементу класс hide-show (спрятать/показать) */
+	list.classList.toggle("hide-show");
+	});
