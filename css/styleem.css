@@ -162,6 +162,10 @@ body{
 	display:none;
 }
 
+.main-navigation:hover ul.lists {
+	display: block;
+}
+
 .main-navigation .lists.hide-show {
     display: block;
 }
@@ -1183,9 +1187,7 @@ a:active .icon-basket {
 	left: 50%;
 	top: 50%; 							
 	transform:translate(-50%, -50%);	
-	width: 630px;
-	min-width: 320px;
-	box-sizing: border-box;
+	width: 460px;
 	padding: 56px 90px 50px 80px;
 	background-color: #fff;
 	color: #000;
@@ -1205,26 +1207,23 @@ a:active .icon-basket {
 }
 
 @keyframes show {			/* Кадры анимации открытия Модального окна */
- 0% {
-		transform: scale(0);
-		opacity: 0.0;		
-	}
-	60% {
-		transform: scale(1.1);	
-	}
-	80% {
-		transform: scale(0.9);
-		opacity: 1;	
-	}	
-	100% {
-		transform: scale(1);
-		opacity: 1;	
-	}	
+  0% {
+    opacity: 0.2;
+  }
+  70% {
+    opacity: 0.4;
+  }
+  90% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .modal-show {		/* Отображение модального окна */
 	display: block;
-	animation: show .5s ease-in-out;	
+	animation: show 1s;
 }
 
 @keyframes close {			/* Кадры анимации закрытия Модального окна */
@@ -1627,10 +1626,5 @@ a:active .icon-basket {
 			}
 			.login-form textarea {
 				
-			}
-		}
-		@media screen and (min-width: 768px) {
-			.modal-window {
-				width: 630px;
 			}
 		}
