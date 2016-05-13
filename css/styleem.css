@@ -161,6 +161,10 @@ body{
 .main-navigation .hide-show {	/* Гамбургер спрятан */
 	display:none;
 }
+
+.main-navigation .lists.hide-show {
+    display: block;
+}
 			
 .main-navigation li:last-child a {		/* Последний элемент меню Хедера (корзина) */
 	padding: 3px 0px 3px 30px;
@@ -1179,7 +1183,9 @@ a:active .icon-basket {
 	left: 50%;
 	top: 50%; 							
 	transform:translate(-50%, -50%);	
-	width: 460px;
+	width: 630px;
+	min-width: 320px;
+	box-sizing: border-box;
 	padding: 56px 90px 50px 80px;
 	background-color: #fff;
 	color: #000;
@@ -1261,13 +1267,18 @@ a:active .icon-basket {
 	animation: error 2s;
 }
 
+.login-form {
+	min-width: 220px;
+}
+
 .login-form .left-part {
 	float: left;
 	margin-right: 20px;
 }
 
 .login-form input[type="text"], .login-form input[type="email"] {
-	width: 186px;
+	width: 220px;
+	box-sizing: border-box;
 	margin: 0;
 	margin-top: 10px;
 	margin-bottom: 20px;
@@ -1295,7 +1306,9 @@ a:active .icon-basket {
 }
 
 .login-form textarea {
-	width: 428px;
+	max-width: 460px;
+	width: 100%;
+	box-sizing: border-box;
 	padding: 10px 14px;
 	font-size: 1.2em;	/* 12px */
 	line-height: 1.8em;	/* 18px */
@@ -1312,7 +1325,9 @@ a:active .icon-basket {
 .login-form .btn {						/* Кнопка Отправить в модальном окне Напишите нам  */
     display: block;
 	float: left;
-	width: 460px;
+	max-width: 460px;
+	min-width: 220px;
+	width: 100%;
     border: none;
 	outline: none;
 	font-size: 1.2em;	/* 12px */
@@ -1588,8 +1603,34 @@ a:active .icon-basket {
 				color: #fb565a;
 				box-shadow: 2px 2px 2px rgba(251,86,90, 0.5)
 			}
+			.modal-window {
+				max-width: 460px;
+				min-width: 320px;
+				
+				box-sizing: border-box;
+			}
+			.login-form .left-part {
+				float: none;
+				margin-right: 0;
+			}
 		}
 		
 		@media screen and (min-width: 320px) and (max-width: 479px) {
-			
+			.modal-window {
+				padding-left: calc((100% - 220px)/2);
+				padding-right: calc((100% - 220px)/2);
+				width: 100%;
+			}
+			.login-form .left-part {
+				float: none;
+				margin-right: 0;
+			}
+			.login-form textarea {
+				
+			}
+		}
+		@media screen and (min-width: 768px) {
+			.modal-window {
+				width: 630px;
+			}
 		}
